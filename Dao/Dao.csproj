@@ -141,6 +141,8 @@
     <Compile Include="DaoProcessoTearColecao.cs" />
     <Compile Include="DaoProducaoTecelagem.cs" />
     <Compile Include="DaoProducaoTecelagemColecao.cs" />
+    <Compile Include="DaoRegistroInventarioTecidos.cs" />
+    <Compile Include="DaoRegistroInventarioTecidosColecao.cs" />
     <Compile Include="DaoRelatorioConsumoDeFiosDeTramaUrdume.cs" />
     <Compile Include="DaoRelatorioConsumoDeFiosDeTramaUrdumeColecao.cs" />
     <Compile Include="DaoRelatorioProdutosBlocoH.cs" />
