@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{99D7C9F6-0B34-40C4-AA2E-A5D66D5682D8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Dao</RootNamespace>
+    <AssemblyName>Dao</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DaoBeneficiamentoApontamentosGrupoMaquinaSintetico.cs" />
+    <Compile Include="DaoBeneficiamentoApontamentosGrupoMaquinaSinteticoColecao.cs" />
+    <Compile Include="DaoBeneficiamentoApontamentosMaquinas.cs" />
+    <Compile Include="DaoBeneficiamentoApontamentosMaquinasColecao.cs" />
+    <Compile Include="DaoBeneficiamentoProcesso.cs" />
+    <Compile Include="DaoBeneficiamentoProcessoColecao.cs" />
+    <Compile Include="DaoControladoriaPecaTecelagem.cs" />
+    <Compile Include="DaoControladoriaPecaTecelagemColecao.cs" />
+    <Compile Include="DaoControladoriaRomaneioTecelagem.cs" />
+    <Compile Include="DaoControladoriaRomaneioTecelagemColecao.cs" />
+    <Compile Include="DaoBeneficiamentoApontamentosMaquinasAnalitico.cs" />
+    <Compile Include="DaoBeneficiamentoApontamentosMaquinasAnaliticoColecao.cs" />
+    <Compile Include="DaoDashBeneficiamentoProducao.cs" />
+    <Compile Include="DaoDashBeneficiamentoProducaoColecao.cs" />
+    <Compile Include="DaoDashConsumoDeFiosDeTramaSintetico.cs" />
+    <Compile Include="DaoDashConsumoDeFiosDeTramaSinteticoColecao.cs" />
+    <Compile Include="DaoDashConsumoDeFiosDeUrdumeSintetico.cs" />
+    <Compile Include="DaoDashConsumoDeFiosDeUrdumeSinteticoColecao.cs" />
+    <Compile Include="DaoDashEficienciaMetragem.cs" />
+    <Compile Include="DaoDashEficienciaMetragemColecao.cs" />
+    <Compile Include="DaoDashEficienciaMetragemFolguista.cs" />
+    <Compile Include="DaoDashEficienciaMetragemFolguistaColecao.cs" />
+    <Compile Include="DaoDashFaturamentoDiaAtualGrupoSintetico.cs" />
+    <Compile Include="DaoDashFaturamentoDiaAtualGrupoSinteticoColecao.cs" />
+    <Compile Include="DaoDashFaturamentoMesAtualGrupoSintetico.cs" />
+    <Compile Include="DaoDashFaturamentoMesAtualGrupoSinteticoColecao.cs" />
+    <Compile Include="DaoDashFaturamentoMesAtualUFSintetico.cs" />
+    <Compile Include="DaoDashFaturamentoMesAtualUFSinteticoColecao.cs" />
+    <Compile Include="DaoDashFinanceiroContasPagarReceber.cs" />
+    <Compile Include="DaoDashFinanceiroContasPagarReceberColecao.cs" />
+    <Compile Include="DaoDashInventarioSaldoFios.cs" />
+    <Compile Include="DaoDashInventarioSaldoFiosColecao.cs" />
+    <Compile Include="DaoDashListagemDePecasMesAtual.cs" />
+    <Compile Include="DaoDashListagemDePecasMesAnterior.cs" />
+    <Compile Include="DaoDashListagemDePecasMesAnteriorColecao.cs" />
+    <Compile Include="DaoDashListagemDePecasMesAtualColecao.cs" />
+    <Compile Include="DaoDashPedidosQuantidadeValor.cs" />
+    <Compile Include="DaoDashPedidosQuantidadeValorColecao.cs" />
+    <Compile Include="DaoDashProcessosBeneficiamento.cs" />
+    <Compile Include="DaoDashProcessosBeneficiamentoColecao.cs" />
+    <Compile Include="DaoDashProducaoTeares.cs" />
+    <Compile Include="DaoDashProducaoTearesColecao.cs" />
+    <Compile Include="DaoDashRevisaoTotalMetrosPorOperador.cs" />
+    <Compile Include="DaoDashRevisaoTotalMetrosPorOperadorColecao.cs" />
+    <Compile Include="DaoDashSituacaoOp.cs" />
+    <Compile Include="DaoDashSituacaoOpColecao.cs" />
+    <Compile Include="DaoDashTotalDeBaixas.cs" />
+    <Compile Include="DaoDashTotalDeBaixasColecao.cs" />
+    <Compile Include="DaoDashValorPonto.cs" />
+    <Compile Include="DaoDashValorPontoColecao.cs" />
+    <Compile Include="DaoEscalaFolguista.cs" />
+    <Compile Include="DaoEscalaFolguistaColecao.cs" />
+    <Compile Include="DaoGrandeza.cs" />
+    <Compile Include="DaoInsertsFinanceiros.cs" />
+    <Compile Include="DaoInsertsFinanceirosColecao.cs" />
+    <Compile Include="DaoKPIFinanceiroFaturamentoHoje.cs" />
+    <Compile Include="DaoKPIFinanceiroFaturamentoHojeDuplicatasEmitidas.cs" />
+    <Compile Include="DaoKPIFinanceiroFaturamentoHojeDuplicatasEmitidasColecao.cs" />
+    <Compile Include="DaoKPIFinanceiroFaturamentoHojeEntradasAVista.cs" />
+    <Compile Include="DaoKPIFinanceiroFaturamentoHojeEntradasAVistaColecao.cs" />
+    <Compile Include="DaoKPIFinanceiroFaturamentoHojeNotasEmitidas.cs" />
+    <Compile Include="DaoKPIFinanceiroFaturamentoHojeNotasEmitidasColecao.cs" />
+    <Compile Include="DaoKPIFinanceiroFluxoCaixaHoje.cs" />
+    <Compile Include="DaoKPIFinanceiroFluxoCaixaHojeColecao.cs" />
+    <Compile Include="DaoKPIFinanceiroInadimplencia.cs" />
+    <Compile Include="DaoKPIFinanceiroInadimplenciaColecao.cs" />
+    <Compile Include="DaoKPIFinanceiroPagamentos.cs" />
+    <Compile Include="DaoKPIFinanceiroPagamentosAno.cs" />
+    <Compile Include="DaoKPIFinanceiroPagamentosAnoColecao.cs" />
+    <Compile Include="DaoKPIFinanceiroPagamentosHoje.cs" />
+    <Compile Include="DaoKPIFinanceiroPagamentosHojeColecao.cs" />
+    <Compile Include="DaoKPIFinanceiroPagamentosListagemTotalBaixasDiaMesAtual.cs" />
+    <Compile Include="DaoKPIFinanceiroPagamentosListagemTotalBaixasDiaMesAtualColecao.cs" />
+    <Compile Include="DaoKPIFinanceiroPagamentosMes.cs" />
+    <Compile Include="DaoKPIFinanceiroPagamentosMesColecao.cs" />
+    <Compile Include="DaoKPIFinanceiroPagamentosOntem.cs" />
+    <Compile Include="DaoKPIFinanceiroPagamentosOntemColecao.cs" />
+    <Compile Include="DaoKPIFinanceiroPrevisaoTrimestralDeSaldo.cs" />
+    <Compile Include="DaoKPIFinanceiroPrevisaoTrimestralDeSaldoColecao.cs" />
+    <Compile Include="DaoKPIFinanceiroRecebimentosOntem.cs" />
+    <Compile Include="DaoKPIFinanceiroRecebimentos.cs" />
+    <Compile Include="DaoKPIFinanceiroRecebimentosAno.cs" />
+    <Compile Include="DaoKPIFinanceiroRecebimentosAnoColecao.cs" />
+    <Compile Include="DaoKPIFinanceiroRecebimentosHoje.cs" />
+    <Compile Include="DaoKPIFinanceiroRecebimentosHojeColecao.cs" />
+    <Compile Include="DaoKPIFinanceiroRecebimentosMes.cs" />
+    <Compile Include="DaoKPIFinanceiroRecebimentosMesColecao.cs" />
+    <Compile Include="DaoKPIFinanceiroRecebimentosOntemColecao.cs" />
+    <Compile Include="DaoMetas.cs" />
+    <Compile Include="DaoMetasColecao.cs" />
+    <Compile Include="DaoNumeroDeBatidas.cs" />
+    <Compile Include="DaoNumeroDeBatidasColecao.cs" />
+    <Compile Include="DaoOperador.cs" />
+    <Compile Include="DaoOperadorColecao.cs" />
+    <Compile Include="DaoOrdem.cs" />
+    <Compile Include="DaoOrdemColecao.cs" />
+    <Compile Include="DaoProcessoTear.cs" />
+    <Compile Include="DaoProcessoTearColecao.cs" />
+    <Compile Include="DaoProducaoTecelagem.cs" />
+    <Compile Include="DaoProducaoTecelagemColecao.cs" />
+    <Compile Include="DaoRelatorioConsumoDeFiosDeTramaUrdume.cs" />
+    <Compile Include="DaoRelatorioConsumoDeFiosDeTramaUrdumeColecao.cs" />
+    <Compile Include="DaoRelatorioProdutosBlocoH.cs" />
+    <Compile Include="DaoRelatorioProdutosBlocoHColecao.cs" />
+    <Compile Include="DaoRelListagemDePecas.cs" />
+    <Compile Include="DaoRelListagemDePecasColecao.cs" />
+    <Compile Include="DaoSaldoFaccionistaSintetico.cs" />
+    <Compile Include="DaoSaldoFaccionistaSinteticoColecao.cs" />
+    <Compile Include="DaoTearSituacaoMotivo.cs" />
+    <Compile Include="DaoTear.cs" />
+    <Compile Include="DaoTearColecao.cs" />
+    <Compile Include="DaoTearOrdem.cs" />
+    <Compile Include="DaoTearOrdemColecao.cs" />
+    <Compile Include="DaoTearSituacao.cs" />
+    <Compile Include="DaoTearSituacaoColecao.cs" />
+    <Compile Include="DaoTearSituacaoMotivoColecao.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

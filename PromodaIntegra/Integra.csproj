@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E43E9149-3185-45C5-847A-4C90830F7B85}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PromodaIntegra</RootNamespace>
+    <AssemblyName>PromodaIntegra</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>LogoPromodaIntegra.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DBPromodaDataRelatorioConsumoDeFiosDeUrdume.cs">
+      <DependentUpon>DBPromodaDataRelatorioConsumoDeFiosDeUrdume.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DBPromodaDataRelatorioConsumoDeFiosDeUrdume.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBPromodaDataRelatorioConsumoDeFiosDeUrdume.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DBPromodaDataSetRelatorioConsumoDeFiosDeTrama.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBPromodaDataSetRelatorioConsumoDeFiosDeTrama.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DBPromodaDataSetRelatorioConsumoDeFiosDeTramaSintetico.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBPromodaDataSetRelatorioConsumoDeFiosDeTramaSintetico.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DBPromodaDataSetRelatorioConsumoDeFiosDeUrdumeSintetico.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBPromodaDataSetRelatorioConsumoDeFiosDeUrdumeSintetico.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DBPromodaDataSetUspRelListagemDePecas.cs">
+      <DependentUpon>DBPromodaDataSetUspRelListagemDePecas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DBPromodaDataSetUspRelListagemDePecas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBPromodaDataSetUspRelListagemDePecas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDirectPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDirectPrint.Designer.cs">
+      <DependentUpon>FrmDirectPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ean13.cs" />
+    <Compile Include="FrmPedidosDepartamentalizacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPedidosDepartamentalizacao.Designer.cs">
+      <DependentUpon>FrmPedidosDepartamentalizacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProducaoTecelagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProducaoTecelagem.Designer.cs">
+      <DependentUpon>FrmProducaoTecelagem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIndicadoresListagemDePecas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIndicadoresListagemDePecas.Designer.cs">
+      <DependentUpon>FrmIndicadoresListagemDePecas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmKanbanBeneficiamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKanbanBeneficiamento.Designer.cs">
+      <DependentUpon>FrmKanbanBeneficiamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenuPrincipal.Designer.cs">
+      <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRelatorioConsumoDeFiosDeTrama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRelatorioConsumoDeFiosDeTrama.Designer.cs">
+      <DependentUpon>FrmRelatorioConsumoDeFiosDeTrama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRelatorioConsumoDeFiosDeTramaSintetico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRelatorioConsumoDeFiosDeTramaSintetico.Designer.cs">
+      <DependentUpon>FrmRelatorioConsumoDeFiosDeTramaSintetico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRelatorioConsumoDeFiosDeUrdume.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRelatorioConsumoDeFiosDeUrdume.Designer.cs">
+      <DependentUpon>FrmRelatorioConsumoDeFiosDeUrdume.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRelatorioConsumoDeFiosDeUrdumeSintetico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRelatorioConsumoDeFiosDeUrdumeSintetico.Designer.cs">
+      <DependentUpon>FrmRelatorioConsumoDeFiosDeUrdumeSintetico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRelListagemDePecas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRelListagemDePecas.Designer.cs">
+      <DependentUpon>FrmRelListagemDePecas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControladoriaRomaneioTecelagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControladoriaRomaneioTecelagem.Designer.cs">
+      <DependentUpon>FrmControladoriaRomaneioTecelagem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSaldoBancario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSaldoBancario.Designer.cs">
+      <DependentUpon>FrmSaldoBancario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSituacaoOp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSituacaoOp.Designer.cs">
+      <DependentUpon>FrmSituacaoOp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVincularPedidosOP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVincularPedidosOP.Designer.cs">
+      <DependentUpon>FrmVincularPedidosOP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmDirectPrint.resx">
+      <DependentUpon>FrmDirectPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPedidosDepartamentalizacao.resx">
+      <DependentUpon>FrmPedidosDepartamentalizacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProducaoTecelagem.resx">
+      <DependentUpon>FrmProducaoTecelagem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIndicadoresListagemDePecas.resx">
+      <DependentUpon>FrmIndicadoresListagemDePecas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKanbanBeneficiamento.resx">
+      <DependentUpon>FrmKanbanBeneficiamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenuPrincipal.resx">
+      <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRelatorioConsumoDeFiosDeTrama.resx">
+      <DependentUpon>FrmRelatorioConsumoDeFiosDeTrama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRelatorioConsumoDeFiosDeTramaSintetico.resx">
+      <DependentUpon>FrmRelatorioConsumoDeFiosDeTramaSintetico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRelatorioConsumoDeFiosDeUrdume.resx">
+      <DependentUpon>FrmRelatorioConsumoDeFiosDeUrdume.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRelatorioConsumoDeFiosDeUrdumeSintetico.resx">
+      <DependentUpon>FrmRelatorioConsumoDeFiosDeUrdumeSintetico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRelListagemDePecas.resx">
+      <DependentUpon>FrmRelListagemDePecas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControladoriaRomaneioTecelagem.resx">
+      <DependentUpon>FrmControladoriaRomaneioTecelagem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSaldoBancario.resx">
+      <DependentUpon>FrmSaldoBancario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSituacaoOp.resx">
+      <DependentUpon>FrmSituacaoOp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVincularPedidosOP.resx">
+      <DependentUpon>FrmVincularPedidosOP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RelListagemDePecas.rdlc" />
+    <EmbeddedResource Include="IndicadoresListagemDePecasDataAtual.rdlc" />
+    <EmbeddedResource Include="IndicadoresListagemDePecasMesPassado.rdlc" />
+    <EmbeddedResource Include="RelatorioConsumoDeFiosDeUrdume.rdlc" />
+    <EmbeddedResource Include="RelatorioConsumoDeFiosDeTrama.rdlc" />
+    <EmbeddedResource Include="RelatorioConsumoDeFiosDeUrdumeSintetico.rdlc" />
+    <EmbeddedResource Include="RelatorioConsumoDeFiosDeTramaSintetico.rdlc" />
+    <None Include="DBPromodaDataRelatorioConsumoDeFiosDeUrdume.xsc">
+      <DependentUpon>DBPromodaDataRelatorioConsumoDeFiosDeUrdume.xsd</DependentUpon>
+    </None>
+    <None Include="DBPromodaDataRelatorioConsumoDeFiosDeUrdume.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBPromodaDataRelatorioConsumoDeFiosDeUrdume.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBPromodaDataRelatorioConsumoDeFiosDeUrdume.xss">
+      <DependentUpon>DBPromodaDataRelatorioConsumoDeFiosDeUrdume.xsd</DependentUpon>
+    </None>
+    <None Include="DBPromodaDataSetRelatorioConsumoDeFiosDeTrama.xsc">
+      <DependentUpon>DBPromodaDataSetRelatorioConsumoDeFiosDeTrama.xsd</DependentUpon>
+    </None>
+    <None Include="DBPromodaDataSetRelatorioConsumoDeFiosDeTrama.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBPromodaDataSetRelatorioConsumoDeFiosDeTrama.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBPromodaDataSetRelatorioConsumoDeFiosDeTrama.xss">
+      <DependentUpon>DBPromodaDataSetRelatorioConsumoDeFiosDeTrama.xsd</DependentUpon>
+    </None>
+    <None Include="DBPromodaDataSetRelatorioConsumoDeFiosDeTramaSintetico.xsc">
+      <DependentUpon>DBPromodaDataSetRelatorioConsumoDeFiosDeTramaSintetico.xsd</DependentUpon>
+    </None>
+    <None Include="DBPromodaDataSetRelatorioConsumoDeFiosDeTramaSintetico.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBPromodaDataSetRelatorioConsumoDeFiosDeTramaSintetico.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBPromodaDataSetRelatorioConsumoDeFiosDeTramaSintetico.xss">
+      <DependentUpon>DBPromodaDataSetRelatorioConsumoDeFiosDeTramaSintetico.xsd</DependentUpon>
+    </None>
+    <None Include="DBPromodaDataSetRelatorioConsumoDeFiosDeUrdumeSintetico.xsc">
+      <DependentUpon>DBPromodaDataSetRelatorioConsumoDeFiosDeUrdumeSintetico.xsd</DependentUpon>
+    </None>
+    <None Include="DBPromodaDataSetRelatorioConsumoDeFiosDeUrdumeSintetico.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBPromodaDataSetRelatorioConsumoDeFiosDeUrdumeSintetico.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBPromodaDataSetRelatorioConsumoDeFiosDeUrdumeSintetico.xss">
+      <DependentUpon>DBPromodaDataSetRelatorioConsumoDeFiosDeUrdumeSintetico.xsd</DependentUpon>
+    </None>
+    <None Include="DBPromodaDataSetUspRelListagemDePecas.xsc">
+      <DependentUpon>DBPromodaDataSetUspRelListagemDePecas.xsd</DependentUpon>
+    </None>
+    <None Include="DBPromodaDataSetUspRelListagemDePecas.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBPromodaDataSetUspRelListagemDePecas.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBPromodaDataSetUspRelListagemDePecas.xss">
+      <DependentUpon>DBPromodaDataSetUspRelListagemDePecas.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bll\Bll.csproj">
+      <Project>{61addfb6-8cbb-48e9-b9e4-9828fa59122f}</Project>
+      <Name>Bll</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dao\Dao.csproj">
+      <Project>{99d7c9f6-0b34-40c4-aa2e-a5d66d5682d8}</Project>
+      <Name>Dao</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LogoPromodaIntegra.ico" />
+    <None Include="Resources\e_dgb.png" />
+    <None Include="Resources\icoProcesso2.png" />
+    <None Include="Resources\logoPromodaIntegra.png" />
+    <None Include="Resources\icoProcesso.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

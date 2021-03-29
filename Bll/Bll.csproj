@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{61ADDFB6-8CBB-48E9-B9E4-9828FA59122F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bll</RootNamespace>
+    <AssemblyName>Bll</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BllBeneficiamentoApontamentosGrupoMaquinaSintetico.cs" />
+    <Compile Include="BllBeneficiamentoApontamentosMaquinas.cs" />
+    <Compile Include="BllBeneficiamentoApontamentosMaquinasAnalitico.cs" />
+    <Compile Include="BllBeneficiamentoProcesso.cs" />
+    <Compile Include="BllControladoriaPecaTecelagem.cs" />
+    <Compile Include="BllControladoriaRomaneioTecelagem.cs" />
+    <Compile Include="BllDashBeneficiamentoProducao.cs" />
+    <Compile Include="BllDashConsumoDeFiosDeTramaSintetico.cs" />
+    <Compile Include="BllDashConsumoDeFiosDeUrdumeSintetico.cs" />
+    <Compile Include="BllDashEficienciaMetragem.cs" />
+    <Compile Include="BllDashEficienciaMetragemFolguista.cs" />
+    <Compile Include="BllDashFaturamentoDiaAtualGrupoSintetico.cs" />
+    <Compile Include="BllDashFaturamentoMesAtualGrupoSintetico.cs" />
+    <Compile Include="BllDashFaturamentoMesAtualUFSintetico.cs" />
+    <Compile Include="BllDashFinanceiroContasPagarReceber.cs" />
+    <Compile Include="BllDashInventarioSaldoFios.cs" />
+    <Compile Include="BllDashListagemDePecasMesAnterior.cs" />
+    <Compile Include="BllDashListagemDePecasMesAtual.cs" />
+    <Compile Include="BllDashPedidosQuantidadeValor.cs" />
+    <Compile Include="BllDashProcessosBeneficiamento.cs" />
+    <Compile Include="BllDashProducaoTeares.cs" />
+    <Compile Include="BllDashRevisaoTotalMetrosPorOperador.cs" />
+    <Compile Include="BllDashSituacaoOp.cs" />
+    <Compile Include="BllDashTotalDeBaixas.cs" />
+    <Compile Include="BllDashValorPonto.cs" />
+    <Compile Include="BllEscalaFolguista.cs" />
+    <Compile Include="BllInsertsFinanceiros.cs" />
+    <Compile Include="BllKPIFinanceiroFaturamentoHoje.cs" />
+    <Compile Include="BllKPIFinanceiroFluxoCaixaHoje.cs" />
+    <Compile Include="BllKPIFinanceiroInadimplencia.cs" />
+    <Compile Include="BllKPIFinanceiroPagamentos.cs" />
+    <Compile Include="BllKPIFinanceiroPrevisaoTrimestralDeSaldo.cs" />
+    <Compile Include="BllKPIFinanceiroRecebimentos.cs" />
+    <Compile Include="BllNumeroDeBatidas.cs" />
+    <Compile Include="BllOperador.cs" />
+    <Compile Include="BllOrdem.cs" />
+    <Compile Include="BllProcessoTear.cs" />
+    <Compile Include="BllProducaoTecelagem.cs" />
+    <Compile Include="BllRelatorioConsumoDeFiosDeTramaUrdume.cs" />
+    <Compile Include="BllRelatorioProdutosBlocoH.cs" />
+    <Compile Include="BllRelListagemDePecas.cs" />
+    <Compile Include="BllSaldoFaccionistaSintetico.cs" />
+    <Compile Include="BllTear.cs" />
+    <Compile Include="BllTearOrdem.cs" />
+    <Compile Include="BllTearSituacao.cs" />
+    <Compile Include="BllTearSituacaoMotivo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dal\Dal.csproj">
+      <Project>{a12d7436-6dbd-4ab2-8795-6aac8b5edaca}</Project>
+      <Name>Dal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dao\Dao.csproj">
+      <Project>{99d7c9f6-0b34-40c4-aa2e-a5d66d5682d8}</Project>
+      <Name>Dao</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
