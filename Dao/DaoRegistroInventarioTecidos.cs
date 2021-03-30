@@ -23,7 +23,5 @@ namespace Dao
         public decimal CustoMetro { get; set; }
         public decimal CustoMetroOutros { get; set; }
         public decimal CustoTotal { get; set; }
-        public string DataSaida { get; set; }
-
     }
 }

@@ -76,8 +76,7 @@ namespace Bll
                     daoRegistroInventarioTecidos.CustoMetro = Convert.ToDecimal(linha["CustoMetro"]);
                     daoRegistroInventarioTecidos.CustoMetroOutros = Convert.ToDecimal(linha["CustoMetroOutros"]);
                     daoRegistroInventarioTecidos.CustoTotal = Convert.ToDecimal(linha["CustoTotal"]);
-                    daoRegistroInventarioTecidos.DataSaida = linha["DataSaida"].ToString();
-
+                    
                     daoRegistroInventarioTecidosColecao.Add(daoRegistroInventarioTecidos);
 
                 }
@@ -91,7 +90,7 @@ namespace Bll
             }
         }
 
-        public string CarregarDashConsumoDeFiosDeTramaSinteticoEmDBPromodaDash(DaoRegistroInventarioTecidosColecao daoRegistroInventarioTecidosColecao)
+        public string CarregaRegistroInventarioTecidosEmDBPromodaDash(DaoRegistroInventarioTecidosColecao daoRegistroInventarioTecidosColecao)
         {
             try
             {
@@ -117,7 +116,6 @@ namespace Bll
                     daoRegistroInventarioTecidos.CustoMetro = Convert.ToDecimal(linha["CustoMetro"]);
                     daoRegistroInventarioTecidos.CustoMetroOutros = Convert.ToDecimal(linha["CustoMetroOutros"]);
                     daoRegistroInventarioTecidos.CustoTotal = Convert.ToDecimal(linha["CustoTotal"]);
-                    daoRegistroInventarioTecidos.DataSaida = linha["DataSaida"].ToString();
                     dalMySql.LimparParametros();
                     dalMySql.AdicionaParametros("@ProdutoCodigo", daoRegistroInventarioTecidos.ProdutoCodigo);
                     dalMySql.AdicionaParametros("@ProdutoDescricao", daoRegistroInventarioTecidos.ProdutoDescricao);
@@ -134,9 +132,64 @@ namespace Bll
                     dalMySql.AdicionaParametros("@CustoMetro", daoRegistroInventarioTecidos.CustoMetro);
                     dalMySql.AdicionaParametros("@CustoMetroOutros", daoRegistroInventarioTecidos.CustoMetroOutros);
                     dalMySql.AdicionaParametros("@CustoTotal", daoRegistroInventarioTecidos.CustoTotal);
-                    dalMySql.AdicionaParametros("@DataSaida", daoRegistroInventarioTecidos.DataSaida);
-                    
+                                        
                     dalMySql.ExecutarManipulacao(CommandType.StoredProcedure, "uspRegistroInventarioTecidosInserir");
+
+                }
+                return retorno;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Nao foi Possivel inserir dados'. Detalhes: " + ex.Message);
+            }
+
+
+        }
+
+        public string CarregaBaixaInventarioEmDBPromodaDash(DaoRegistroInventarioTecidosColecao daoRegistroInventarioTecidosColecao)
+        {
+            try
+            {
+                string retorno = "ok";
+                dalMySql.LimparParametros();
+                dalMySql.ExecutarManipulacao(CommandType.StoredProcedure, "uspBaixaInventarioDeletar");
+                DataTable dataTableDaoRegistroInventarioTecidosColecao = ConvertToDataTable(daoRegistroInventarioTecidosColecao);
+                foreach (DataRow linha in dataTableDaoRegistroInventarioTecidosColecao.Rows)
+                {
+                    DaoRegistroInventarioTecidos daoRegistroInventarioTecidos = new DaoRegistroInventarioTecidos();
+                    daoRegistroInventarioTecidos.ProdutoCodigo = linha["ProdutoCodigo"].ToString();
+                    daoRegistroInventarioTecidos.ProdutoDescricao = linha["ProdutoDescricao"].ToString();
+                    daoRegistroInventarioTecidos.NumeroRolo = linha["NumeroRolo"].ToString();
+                    daoRegistroInventarioTecidos.NumeroPeca = linha["NumeroPeca"].ToString();
+                    daoRegistroInventarioTecidos.Situacao = linha["Situacao"].ToString();
+                    daoRegistroInventarioTecidos.Cor = linha["Cor"].ToString();
+                    daoRegistroInventarioTecidos.CorDescricao = linha["CorDescricao"].ToString();
+                    daoRegistroInventarioTecidos.Desenho = linha["Desenho"].ToString();
+                    daoRegistroInventarioTecidos.Variante = linha["Variante"].ToString();
+                    daoRegistroInventarioTecidos.Categoria = linha["Categoria"].ToString();
+                    daoRegistroInventarioTecidos.Metros = Convert.ToDecimal(linha["Metros"]);
+                    daoRegistroInventarioTecidos.Peso = Convert.ToDecimal(linha["Peso"]);
+                    daoRegistroInventarioTecidos.CustoMetro = Convert.ToDecimal(linha["CustoMetro"]);
+                    daoRegistroInventarioTecidos.CustoMetroOutros = Convert.ToDecimal(linha["CustoMetroOutros"]);
+                    daoRegistroInventarioTecidos.CustoTotal = Convert.ToDecimal(linha["CustoTotal"]);
+                    dalMySql.LimparParametros();
+                    dalMySql.AdicionaParametros("@ProdutoCodigo", daoRegistroInventarioTecidos.ProdutoCodigo);
+                    dalMySql.AdicionaParametros("@ProdutoDescricao", daoRegistroInventarioTecidos.ProdutoDescricao);
+                    dalMySql.AdicionaParametros("@NumeroRolo", daoRegistroInventarioTecidos.NumeroRolo);
+                    dalMySql.AdicionaParametros("@NumeroPeca", daoRegistroInventarioTecidos.NumeroPeca);
+                    dalMySql.AdicionaParametros("@Situacao", daoRegistroInventarioTecidos.Situacao);
+                    dalMySql.AdicionaParametros("@Cor", daoRegistroInventarioTecidos.Cor);
+                    dalMySql.AdicionaParametros("@CorDescricao", daoRegistroInventarioTecidos.CorDescricao);
+                    dalMySql.AdicionaParametros("@Desenho", daoRegistroInventarioTecidos.Desenho);
+                    dalMySql.AdicionaParametros("@Variante", daoRegistroInventarioTecidos.Variante);
+                    dalMySql.AdicionaParametros("@Categoria", daoRegistroInventarioTecidos.Categoria);
+                    dalMySql.AdicionaParametros("@Metros", daoRegistroInventarioTecidos.Metros);
+                    dalMySql.AdicionaParametros("@Peso", daoRegistroInventarioTecidos.Peso);
+                    dalMySql.AdicionaParametros("@CustoMetro", daoRegistroInventarioTecidos.CustoMetro);
+                    dalMySql.AdicionaParametros("@CustoMetroOutros", daoRegistroInventarioTecidos.CustoMetroOutros);
+                    dalMySql.AdicionaParametros("@CustoTotal", daoRegistroInventarioTecidos.CustoTotal);
+
+                    dalMySql.ExecutarManipulacao(CommandType.StoredProcedure, "uspBaixaInventarioInserir");
 
                 }
                 return retorno;
