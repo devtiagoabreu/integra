@@ -79,6 +79,7 @@
     <Compile Include="BllOrdem.cs" />
     <Compile Include="BllProcessoTear.cs" />
     <Compile Include="BllProducaoTecelagem.cs" />
+    <Compile Include="BllRegistroInventarioTecidos.cs" />
     <Compile Include="BllRelatorioConsumoDeFiosDeTramaUrdume.cs" />
     <Compile Include="BllRelatorioProdutosBlocoH.cs" />
     <Compile Include="BllRelListagemDePecas.cs" />

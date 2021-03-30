@@ -17,6 +17,7 @@ namespace Dao
         public string CorDescricao { get; set; }
         public string Desenho { get; set; }
         public string Variante { get; set; }
+        public string Categoria { get; set; }
         public decimal Metros { get; set; }
         public decimal Peso { get; set; }
         public decimal CustoMetro { get; set; }
