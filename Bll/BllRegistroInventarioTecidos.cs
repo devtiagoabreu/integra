@@ -64,6 +64,7 @@ namespace Bll
 
                         DaoRegistroInventarioTecidos daoRegistroInventarioTecidos = new DaoRegistroInventarioTecidos();
                         daoRegistroInventarioTecidos.ProdutoCodigo = linha["ProdutoCodigo"].ToString();
+                        daoRegistroInventarioTecidos.ProdutoDescricao = linha["ProdutoDescricao"].ToString();
                         daoRegistroInventarioTecidos.Situacao = linha["Situacao"].ToString();
                         daoRegistroInventarioTecidos.Cor = linha["Cor"].ToString();
                         daoRegistroInventarioTecidos.CorDescricao = linha["CorDescricao"].ToString();
@@ -84,6 +85,7 @@ namespace Bll
 
                         DaoRegistroInventarioTecidos daoRegistroInventarioTecidos = new DaoRegistroInventarioTecidos();
                         daoRegistroInventarioTecidos.ProdutoCodigo = linha["ProdutoCodigo"].ToString();
+                        daoRegistroInventarioTecidos.ProdutoDescricao = linha["ProdutoDescricao"].ToString();
                         daoRegistroInventarioTecidos.Situacao = linha["Situacao"].ToString();
                         daoRegistroInventarioTecidos.Cor = linha["Cor"].ToString();
                         daoRegistroInventarioTecidos.CorDescricao = linha["CorDescricao"].ToString();
@@ -107,6 +109,7 @@ namespace Bll
 
                         DaoRegistroInventarioTecidos daoRegistroInventarioTecidos = new DaoRegistroInventarioTecidos();
                         daoRegistroInventarioTecidos.ProdutoCodigo = linha["ProdutoCodigo"].ToString();
+                        daoRegistroInventarioTecidos.ProdutoDescricao = linha["ProdutoDescricao"].ToString();
                         daoRegistroInventarioTecidos.NumeroRolo = linha["NumeroRolo"].ToString();
                         daoRegistroInventarioTecidos.NumeroPeca = linha["NumeroPeca"].ToString();
                         daoRegistroInventarioTecidos.Situacao = linha["Situacao"].ToString();
@@ -132,6 +135,7 @@ namespace Bll
 
                         DaoRegistroInventarioTecidos daoRegistroInventarioTecidos = new DaoRegistroInventarioTecidos();
                         daoRegistroInventarioTecidos.ProdutoCodigo = linha["ProdutoCodigo"].ToString();
+                        daoRegistroInventarioTecidos.ProdutoDescricao = linha["ProdutoDescricao"].ToString();
                         daoRegistroInventarioTecidos.Situacao = linha["Situacao"].ToString();
                         daoRegistroInventarioTecidos.Cor = linha["Cor"].ToString();
                         daoRegistroInventarioTecidos.CorDescricao = linha["CorDescricao"].ToString();
@@ -152,6 +156,7 @@ namespace Bll
 
                         DaoRegistroInventarioTecidos daoRegistroInventarioTecidos = new DaoRegistroInventarioTecidos();
                         daoRegistroInventarioTecidos.ProdutoCodigo = linha["ProdutoCodigo"].ToString();
+                        daoRegistroInventarioTecidos.ProdutoDescricao = linha["ProdutoDescricao"].ToString();
                         daoRegistroInventarioTecidos.NumeroRolo = linha["NumeroRolo"].ToString();
                         daoRegistroInventarioTecidos.NumeroPeca = linha["NumeroPeca"].ToString();
                         daoRegistroInventarioTecidos.Situacao = linha["Situacao"].ToString();

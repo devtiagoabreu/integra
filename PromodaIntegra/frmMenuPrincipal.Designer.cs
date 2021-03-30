@@ -417,7 +417,7 @@
             // timerCarregaDash
             // 
             this.timerCarregaDash.Enabled = true;
-            this.timerCarregaDash.Interval = 1800000;
+            this.timerCarregaDash.Interval = 900000;
             this.timerCarregaDash.Tick += new System.EventHandler(this.timerCarregaDash_Tick);
             // 
             // FrmMenuPrincipal
