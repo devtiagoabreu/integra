@@ -316,11 +316,30 @@ namespace PromodaIntegra
 
             #endregion
 
-            #region 26 - KPI FINANCEIRO - FLUXO DE CAIXA HOJE
+            #region 26 -  KPI FINANCEIRO - FLUXO DE CAIXA HOJE
 
             BllKPIFinanceiroFluxoCaixaHoje bllKPIFinanceiroFluxoCaixaHoje = new BllKPIFinanceiroFluxoCaixaHoje();
 
             bllKPIFinanceiroFluxoCaixaHoje.CarregarFluxoCaixaHoje(bllKPIFinanceiroFluxoCaixaHoje.RetornaFluxoCaixaHoje());
+
+
+            #endregion
+
+            #region 27 - REGISTRO INVENTARIO E BAIXA INVENTARIO - TECIDOS
+
+            BllRegistroInventarioTecidos bllRegistroInventarioTecidos = new BllRegistroInventarioTecidos();
+
+            DaoRegistroInventarioTecidos daoRegistroInventarioTecidos = new DaoRegistroInventarioTecidos();
+            daoRegistroInventarioTecidos.ProdutoCodigo = "";
+            daoRegistroInventarioTecidos.NumeroRolo = "";
+            daoRegistroInventarioTecidos.NumeroPeca = "";
+            daoRegistroInventarioTecidos.Situacao = "";
+            daoRegistroInventarioTecidos.Cor = "";
+            daoRegistroInventarioTecidos.Desenho = "";
+            daoRegistroInventarioTecidos.Variante = "";
+            daoRegistroInventarioTecidos.Categoria = "01";
+
+            bllRegistroInventarioTecidos.CarregaRegistroInventarioTecidosEmDBPromodaDash(bllRegistroInventarioTecidos.RetornaRegistroInventarioTecidos(daoRegistroInventarioTecidos, "SS", "", ""));
 
 
             #endregion

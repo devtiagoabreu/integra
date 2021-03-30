@@ -44,9 +44,9 @@ namespace Bll
                 dalSqlServer.LimparParametros();
                 
                 dalSqlServer.AdicionaParametros("@tipoRetorno", tipoRetorno);
+                dalSqlServer.AdicionaParametros("@produtoCodigo", daoRegistroInventarioTecidosParametros.ProdutoCodigo);
                 dalSqlServer.AdicionaParametros("@numeroRolo", daoRegistroInventarioTecidosParametros.NumeroRolo);
                 dalSqlServer.AdicionaParametros("@numeroPeca", daoRegistroInventarioTecidosParametros.NumeroPeca);
-                dalSqlServer.AdicionaParametros("@produtoCodigo", daoRegistroInventarioTecidosParametros.ProdutoCodigo);
                 dalSqlServer.AdicionaParametros("@situacao", daoRegistroInventarioTecidosParametros.Situacao);
                 dalSqlServer.AdicionaParametros("@cor", daoRegistroInventarioTecidosParametros.Cor);
                 dalSqlServer.AdicionaParametros("@desenho", daoRegistroInventarioTecidosParametros.Desenho);
@@ -57,28 +57,115 @@ namespace Bll
 
                 DataTable dataTableDaoRegistroInventarioTecidos = dalSqlServer.ExecutarConsulta(CommandType.StoredProcedure, "uspRegistroInventarioTecidos");
 
-                foreach (DataRow linha in dataTableDaoRegistroInventarioTecidos.Rows)
+                if (tipoRetorno.Equals("SS"))
                 {
+                    foreach (DataRow linha in dataTableDaoRegistroInventarioTecidos.Rows)
+                    {
 
-                    DaoRegistroInventarioTecidos daoRegistroInventarioTecidos = new DaoRegistroInventarioTecidos();
-                    daoRegistroInventarioTecidos.ProdutoCodigo = linha["ProdutoCodigo"].ToString();
-                    daoRegistroInventarioTecidos.ProdutoDescricao = linha["ProdutoDescricao"].ToString();
-                    daoRegistroInventarioTecidos.NumeroRolo = linha["NumeroRolo"].ToString();
-                    daoRegistroInventarioTecidos.NumeroPeca = linha["NumeroPeca"].ToString();
-                    daoRegistroInventarioTecidos.Situacao = linha["Situacao"].ToString();
-                    daoRegistroInventarioTecidos.Cor = linha["Cor"].ToString();
-                    daoRegistroInventarioTecidos.CorDescricao = linha["CorDescricao"].ToString();
-                    daoRegistroInventarioTecidos.Desenho = linha["Desenho"].ToString();
-                    daoRegistroInventarioTecidos.Variante = linha["Variante"].ToString();
-                    daoRegistroInventarioTecidos.Categoria = linha["Categoria"].ToString();
-                    daoRegistroInventarioTecidos.Metros = Convert.ToDecimal(linha["Metros"]);
-                    daoRegistroInventarioTecidos.Peso = Convert.ToDecimal(linha["Peso"]);
-                    daoRegistroInventarioTecidos.CustoMetro = Convert.ToDecimal(linha["CustoMetro"]);
-                    daoRegistroInventarioTecidos.CustoMetroOutros = Convert.ToDecimal(linha["CustoMetroOutros"]);
-                    daoRegistroInventarioTecidos.CustoTotal = Convert.ToDecimal(linha["CustoTotal"]);
-                    
-                    daoRegistroInventarioTecidosColecao.Add(daoRegistroInventarioTecidos);
+                        DaoRegistroInventarioTecidos daoRegistroInventarioTecidos = new DaoRegistroInventarioTecidos();
+                        daoRegistroInventarioTecidos.ProdutoCodigo = linha["ProdutoCodigo"].ToString();
+                        daoRegistroInventarioTecidos.Situacao = linha["Situacao"].ToString();
+                        daoRegistroInventarioTecidos.Cor = linha["Cor"].ToString();
+                        daoRegistroInventarioTecidos.CorDescricao = linha["CorDescricao"].ToString();
+                        daoRegistroInventarioTecidos.Desenho = linha["Desenho"].ToString();
+                        daoRegistroInventarioTecidos.Variante = linha["Variante"].ToString();
+                        daoRegistroInventarioTecidos.Categoria = linha["Categoria"].ToString();
+                        daoRegistroInventarioTecidos.Metros = Convert.ToDecimal(linha["Metros"]);
+                        daoRegistroInventarioTecidos.Peso = Convert.ToDecimal(linha["Peso"]);
+                       
+                        daoRegistroInventarioTecidosColecao.Add(daoRegistroInventarioTecidos);
 
+                    }
+                }
+                else if (tipoRetorno.Equals("SC"))
+                {
+                    foreach (DataRow linha in dataTableDaoRegistroInventarioTecidos.Rows)
+                    {
+
+                        DaoRegistroInventarioTecidos daoRegistroInventarioTecidos = new DaoRegistroInventarioTecidos();
+                        daoRegistroInventarioTecidos.ProdutoCodigo = linha["ProdutoCodigo"].ToString();
+                        daoRegistroInventarioTecidos.Situacao = linha["Situacao"].ToString();
+                        daoRegistroInventarioTecidos.Cor = linha["Cor"].ToString();
+                        daoRegistroInventarioTecidos.CorDescricao = linha["CorDescricao"].ToString();
+                        daoRegistroInventarioTecidos.Desenho = linha["Desenho"].ToString();
+                        daoRegistroInventarioTecidos.Variante = linha["Variante"].ToString();
+                        daoRegistroInventarioTecidos.Categoria = linha["Categoria"].ToString();
+                        daoRegistroInventarioTecidos.Metros = Convert.ToDecimal(linha["Metros"]);
+                        daoRegistroInventarioTecidos.Peso = Convert.ToDecimal(linha["Peso"]);
+                        daoRegistroInventarioTecidos.CustoMetro = Convert.ToDecimal(linha["CustoMetro"]);
+                        daoRegistroInventarioTecidos.CustoMetroOutros = Convert.ToDecimal(linha["CustoMetroOutros"]);
+                        daoRegistroInventarioTecidos.CustoTotal = Convert.ToDecimal(linha["CustoTotal"]);
+
+                        daoRegistroInventarioTecidosColecao.Add(daoRegistroInventarioTecidos);
+
+                    }
+                }
+                else if (tipoRetorno.Equals("AC"))
+                {
+                    foreach (DataRow linha in dataTableDaoRegistroInventarioTecidos.Rows)
+                    {
+
+                        DaoRegistroInventarioTecidos daoRegistroInventarioTecidos = new DaoRegistroInventarioTecidos();
+                        daoRegistroInventarioTecidos.ProdutoCodigo = linha["ProdutoCodigo"].ToString();
+                        daoRegistroInventarioTecidos.NumeroRolo = linha["NumeroRolo"].ToString();
+                        daoRegistroInventarioTecidos.NumeroPeca = linha["NumeroPeca"].ToString();
+                        daoRegistroInventarioTecidos.Situacao = linha["Situacao"].ToString();
+                        daoRegistroInventarioTecidos.Cor = linha["Cor"].ToString();
+                        daoRegistroInventarioTecidos.CorDescricao = linha["CorDescricao"].ToString();
+                        daoRegistroInventarioTecidos.Desenho = linha["Desenho"].ToString();
+                        daoRegistroInventarioTecidos.Variante = linha["Variante"].ToString();
+                        daoRegistroInventarioTecidos.Categoria = linha["Categoria"].ToString();
+                        daoRegistroInventarioTecidos.Metros = Convert.ToDecimal(linha["Metros"]);
+                        daoRegistroInventarioTecidos.Peso = Convert.ToDecimal(linha["Peso"]);
+                        daoRegistroInventarioTecidos.CustoMetro = Convert.ToDecimal(linha["CustoMetro"]);
+                        daoRegistroInventarioTecidos.CustoMetroOutros = Convert.ToDecimal(linha["CustoMetroOutros"]);
+                        daoRegistroInventarioTecidos.CustoTotal = Convert.ToDecimal(linha["CustoTotal"]);
+
+                        daoRegistroInventarioTecidosColecao.Add(daoRegistroInventarioTecidos);
+
+                    }
+                }
+                else if (tipoRetorno.Equals("IS"))
+                {
+                    foreach (DataRow linha in dataTableDaoRegistroInventarioTecidos.Rows)
+                    {
+
+                        DaoRegistroInventarioTecidos daoRegistroInventarioTecidos = new DaoRegistroInventarioTecidos();
+                        daoRegistroInventarioTecidos.ProdutoCodigo = linha["ProdutoCodigo"].ToString();
+                        daoRegistroInventarioTecidos.Situacao = linha["Situacao"].ToString();
+                        daoRegistroInventarioTecidos.Cor = linha["Cor"].ToString();
+                        daoRegistroInventarioTecidos.CorDescricao = linha["CorDescricao"].ToString();
+                        daoRegistroInventarioTecidos.Desenho = linha["Desenho"].ToString();
+                        daoRegistroInventarioTecidos.Variante = linha["Variante"].ToString();
+                        daoRegistroInventarioTecidos.Categoria = linha["Categoria"].ToString();
+                        daoRegistroInventarioTecidos.Metros = Convert.ToDecimal(linha["Metros"]);
+                        daoRegistroInventarioTecidos.Peso = Convert.ToDecimal(linha["Peso"]);
+                       
+                        daoRegistroInventarioTecidosColecao.Add(daoRegistroInventarioTecidos);
+
+                    }
+                }
+                else
+                {
+                    foreach (DataRow linha in dataTableDaoRegistroInventarioTecidos.Rows)
+                    {
+
+                        DaoRegistroInventarioTecidos daoRegistroInventarioTecidos = new DaoRegistroInventarioTecidos();
+                        daoRegistroInventarioTecidos.ProdutoCodigo = linha["ProdutoCodigo"].ToString();
+                        daoRegistroInventarioTecidos.NumeroRolo = linha["NumeroRolo"].ToString();
+                        daoRegistroInventarioTecidos.NumeroPeca = linha["NumeroPeca"].ToString();
+                        daoRegistroInventarioTecidos.Situacao = linha["Situacao"].ToString();
+                        daoRegistroInventarioTecidos.Cor = linha["Cor"].ToString();
+                        daoRegistroInventarioTecidos.CorDescricao = linha["CorDescricao"].ToString();
+                        daoRegistroInventarioTecidos.Desenho = linha["Desenho"].ToString();
+                        daoRegistroInventarioTecidos.Variante = linha["Variante"].ToString();
+                        daoRegistroInventarioTecidos.Categoria = linha["Categoria"].ToString();
+                        daoRegistroInventarioTecidos.Metros = Convert.ToDecimal(linha["Metros"]);
+                        daoRegistroInventarioTecidos.Peso = Convert.ToDecimal(linha["Peso"]);
+                        
+                        daoRegistroInventarioTecidosColecao.Add(daoRegistroInventarioTecidos);
+
+                    }
                 }
 
                 return daoRegistroInventarioTecidosColecao;
