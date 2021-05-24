@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DalDBProDash.cs" />
     <Compile Include="DalMySql.cs" />
     <Compile Include="DalProDash.cs" />
     <Compile Include="DalSqlServer.cs" />

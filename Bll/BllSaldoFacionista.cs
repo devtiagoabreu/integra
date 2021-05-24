@@ -18,6 +18,7 @@ namespace Bll
         DalSqlServer dalSqlServer = new DalSqlServer();
         DalMySql dalMySql = new DalMySql();
         DalProDash dalProDash = new DalProDash();
+        DalDBProDash dalDBProDash = new DalDBProDash();
 
         #endregion
 
@@ -45,9 +46,9 @@ namespace Bll
             try
             {
                 DaoSaldoFacionistaList daoSaldoFacionistaList = new DaoSaldoFacionistaList();
-                dalSqlServer.LimparParametros();
+                dalDBProDash.LimparParametros();
 
-                DataTable dataTableDaoBeneficiamentoApontamentosGrupoMaquinaSintetico = dalSqlServer.ExecutarConsulta(CommandType.StoredProcedure, "uspBeneficiamentoApontamentosGrupoMaquinaSintetico");
+                DataTable dataTableDaoBeneficiamentoApontamentosGrupoMaquinaSintetico = dalDBProDash.ExecutarConsulta(CommandType.StoredProcedure, "uspSaldoFacionista");
                 foreach (DataRow linha in dataTableDaoBeneficiamentoApontamentosGrupoMaquinaSintetico.Rows)
                 {
                     DaoSaldoFacionista daoSaldoFacionista = new DaoSaldoFacionista();
