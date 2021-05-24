@@ -203,8 +203,8 @@ namespace PromodaIntegra
 
             #region 14 - DASH INVENTÁRIO SALDO DE FIOS
 
-            BllDashInventarioSaldoFios bllDashInventarioSaldoFios = new BllDashInventarioSaldoFios();
-            bllDashInventarioSaldoFios.CarregarDashInventarioSaldoFiosEmDBPromodaDash(bllDashInventarioSaldoFios.RetornaInvetarioSaldoFios());
+            //BllDashInventarioSaldoFios bllDashInventarioSaldoFios = new BllDashInventarioSaldoFios();
+            //bllDashInventarioSaldoFios.CarregarDashInventarioSaldoFiosEmDBPromodaDash(bllDashInventarioSaldoFios.RetornaInvetarioSaldoFios());
 
             #endregion
 
@@ -251,8 +251,12 @@ namespace PromodaIntegra
 
             #region 20 - DASH SALDO FACCIONISTA SINTÉTICO
 
-            BllSaldoFaccionistaSintetico bllSaldoFaccionistaSintetico = new BllSaldoFaccionistaSintetico();
-            bllSaldoFaccionistaSintetico.CarregarDashSaldoFaccionistaSinteticoEmDBPromodaDash(bllSaldoFaccionistaSintetico.RetornaSaldoFaccionistaSintetico());
+            //BllSaldoFaccionistaSintetico bllSaldoFaccionistaSintetico = new BllSaldoFaccionistaSintetico();
+            //bllSaldoFaccionistaSintetico.CarregarDashSaldoFaccionistaSinteticoEmDBPromodaDash(bllSaldoFaccionistaSintetico.RetornaSaldoFaccionistaSintetico());
+
+            BllSaldoFacionista bllSaldoFacionista = new BllSaldoFacionista();
+            bllSaldoFacionista.CarregaSaldoFacionistaEmProDash(bllSaldoFacionista.RetornaSaldoFacionista());
+
 
             #endregion
 
@@ -337,7 +341,7 @@ namespace PromodaIntegra
             daoRegistroInventarioTecidos.Cor = "";
             daoRegistroInventarioTecidos.Desenho = "";
             daoRegistroInventarioTecidos.Variante = "";
-            daoRegistroInventarioTecidos.Categoria = "01";
+            daoRegistroInventarioTecidos.Categoria = "";
 
             bllRegistroInventarioTecidos.CarregaRegistroInventarioTecidosEmDBPromodaDash(bllRegistroInventarioTecidos.RetornaRegistroInventarioTecidos(daoRegistroInventarioTecidos, "SS", "", ""));
 
@@ -383,6 +387,12 @@ namespace PromodaIntegra
         {
             FrmSaldoBancario frmSaldoBancario = new FrmSaldoBancario();
             frmSaldoBancario.Show();
+        }
+
+        private void dREDadosComplementaresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmDREInserirDadosComplementares frmDREInserirDadosComplementares = new FrmDREInserirDadosComplementares();
+            frmDREInserirDadosComplementares.Show();
         }
     }
 }

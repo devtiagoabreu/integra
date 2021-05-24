@@ -151,6 +151,8 @@
     <Compile Include="DaoRelListagemDePecasColecao.cs" />
     <Compile Include="DaoSaldoFaccionistaSintetico.cs" />
     <Compile Include="DaoSaldoFaccionistaSinteticoColecao.cs" />
+    <Compile Include="DaoSaldoFacionista.cs" />
+    <Compile Include="DaoSaldoFacionistaList.cs" />
     <Compile Include="DaoTearSituacaoMotivo.cs" />
     <Compile Include="DaoTear.cs" />
     <Compile Include="DaoTearColecao.cs" />

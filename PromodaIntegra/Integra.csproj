@@ -90,6 +90,12 @@
       <DependentUpon>FrmDirectPrint.cs</DependentUpon>
     </Compile>
     <Compile Include="Ean13.cs" />
+    <Compile Include="FrmDREInserirDadosComplementares.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDREInserirDadosComplementares.Designer.cs">
+      <DependentUpon>FrmDREInserirDadosComplementares.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPedidosDepartamentalizacao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +184,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmDirectPrint.resx">
       <DependentUpon>FrmDirectPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDREInserirDadosComplementares.resx">
+      <DependentUpon>FrmDREInserirDadosComplementares.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPedidosDepartamentalizacao.resx">
       <DependentUpon>FrmPedidosDepartamentalizacao.cs</DependentUpon>

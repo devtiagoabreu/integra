@@ -84,6 +84,7 @@
     <Compile Include="BllRelatorioProdutosBlocoH.cs" />
     <Compile Include="BllRelListagemDePecas.cs" />
     <Compile Include="BllSaldoFaccionistaSintetico.cs" />
+    <Compile Include="BllSaldoFacionista.cs" />
     <Compile Include="BllTear.cs" />
     <Compile Include="BllTearOrdem.cs" />
     <Compile Include="BllTearSituacao.cs" />

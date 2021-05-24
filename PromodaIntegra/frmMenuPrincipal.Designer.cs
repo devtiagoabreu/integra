@@ -73,6 +73,8 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.timerCarregaDash = new System.Windows.Forms.Timer(this.components);
+            this.administrativoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dREDadosComplementaresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuPrincipal.SuspendLayout();
             this.statusStripRodape.SuspendLayout();
             this.SuspendLayout();
@@ -124,7 +126,8 @@
             this.controladoriaToolStripMenuItem,
             this.faturamentoToolStripMenuItem,
             this.beneficiamentoToolStripMenuItem1,
-            this.financeiroToolStripMenuItem});
+            this.financeiroToolStripMenuItem,
+            this.administrativoToolStripMenuItem});
             this.movimentaçõesToolStripMenuItem.Name = "movimentaçõesToolStripMenuItem";
             this.movimentaçõesToolStripMenuItem.Size = new System.Drawing.Size(112, 21);
             this.movimentaçõesToolStripMenuItem.Text = "Movimentações";
@@ -420,6 +423,21 @@
             this.timerCarregaDash.Interval = 900000;
             this.timerCarregaDash.Tick += new System.EventHandler(this.timerCarregaDash_Tick);
             // 
+            // administrativoToolStripMenuItem
+            // 
+            this.administrativoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dREDadosComplementaresToolStripMenuItem});
+            this.administrativoToolStripMenuItem.Name = "administrativoToolStripMenuItem";
+            this.administrativoToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.administrativoToolStripMenuItem.Text = "Administrativo";
+            // 
+            // dREDadosComplementaresToolStripMenuItem
+            // 
+            this.dREDadosComplementaresToolStripMenuItem.Name = "dREDadosComplementaresToolStripMenuItem";
+            this.dREDadosComplementaresToolStripMenuItem.Size = new System.Drawing.Size(254, 22);
+            this.dREDadosComplementaresToolStripMenuItem.Text = "DRE - Dados Complementares";
+            this.dREDadosComplementaresToolStripMenuItem.Click += new System.EventHandler(this.dREDadosComplementaresToolStripMenuItem_Click);
+            // 
             // FrmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -496,6 +514,8 @@
         private System.Windows.Forms.ToolStripMenuItem departamentosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem financeiroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saldoBancarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem administrativoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dREDadosComplementaresToolStripMenuItem;
     }
 }
 
