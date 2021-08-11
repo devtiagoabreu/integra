@@ -251,9 +251,6 @@ namespace PromodaIntegra
 
             #region 20 - DASH SALDO FACCIONISTA SINTÉTICO
 
-            //BllSaldoFaccionistaSintetico bllSaldoFaccionistaSintetico = new BllSaldoFaccionistaSintetico();
-            //bllSaldoFaccionistaSintetico.CarregarDashSaldoFaccionistaSinteticoEmDBPromodaDash(bllSaldoFaccionistaSintetico.RetornaSaldoFaccionistaSintetico());
-
             BllSaldoFacionista bllSaldoFacionista = new BllSaldoFacionista();
             bllSaldoFacionista.CarregaSaldoFacionistaEmProDash(bllSaldoFacionista.RetornaSaldoFacionista());
 
